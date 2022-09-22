@@ -9,12 +9,14 @@ let gridSize = 0;
 
 generateButton.addEventListener('click', () => {
     gridSize = +prompt('Enter the amount of squares per side: ');
+    //prompted number multiplied by 10 gives us the width of canvas --> therefore its sides are always matching
+    container.style.width = gridSize * 10 + "px"; //TO DEBUG: in place of that 10 number, create a variable which will be giving size of the "brush"
     makeGrid(gridSize * gridSize);
 });
 
 function makeGrid(size) {
 
-    if (size > 10000) {
+    if (size > 10000) { 
         alert('Too high, my brother. Try less than 100.');
     } else {
         for (let i = 1; i <= size; i++){
