@@ -5,7 +5,6 @@ body {
 #container {
     display: flex;
     margin: 0;
-    width: 160px;
     flex-wrap: wrap;
     background-color: white;
 }
