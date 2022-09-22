@@ -5,6 +5,14 @@ const button = document.createElement('button');
 button.textContent = 'Generate your canvas!';
 body.appendChild(button);
 
+let gridSize = 0;
+
+button.addEventListener('click', () => {
+    gridSize = +prompt('Enter the amount of squares per side: ');
+})
+
+console.log(gridSize);
+
 function makeGrid(size) {
     for (let i = 1; i <= size; i++){
         const newDiv = document.createElement('div');
