@@ -5,14 +5,16 @@ const button = document.createElement('button');
 button.textContent = 'Generate your canvas!';
 body.appendChild(button);
 
-button.addEventListener('click', () => {
-    makeGrid(+prompt('Enter the amount of squares per side: '));
-})
+let gridSize = 0;
 
+button.addEventListener('click', () => {
+    gridSize = +prompt('Enter the amount of squares per side: ');
+    makeGrid(gridSize * gridSize);
+})
 
 function makeGrid(size) {
 
-    if (size > 100) {
+    if (size > 10000) {
         alert('Too high, my brother. Try less than 100.');
     } else {
         for (let i = 1; i <= size; i++){
