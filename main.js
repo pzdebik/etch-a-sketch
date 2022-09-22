@@ -23,16 +23,19 @@ function makeGrid(size) {
             container.appendChild(newDiv);
         }
     }
+
+    const items = document.querySelectorAll('.item');
+
+    //When you hover over the grid, you change the div background color
+    items.forEach((item) => {
+        item.addEventListener('mouseover', () => {
+            item.style.backgroundColor = 'black';
+        });    
+    });
+    
 }
 
 
 
-const items = document.querySelectorAll('.item');
 
-//When you hover over the grid, you change the div background color
-items.forEach((item) => {
-    item.addEventListener('mouseover', () => {
-        item.style.backgroundColor = 'black';
-    });    
-});
 
