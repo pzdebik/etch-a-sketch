@@ -1,6 +1,9 @@
 const container = document.querySelector('#container');
+const body = document.querySelector('body');
 
-
+const button = document.createElement('button');
+button.textContent = 'Generate your canvas!';
+body.appendChild(button);
 
 function makeGrid(size) {
     for (let i = 1; i <= size; i++){
