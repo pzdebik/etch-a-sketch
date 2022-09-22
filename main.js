@@ -1,10 +1,10 @@
 const container = document.querySelector('#container');
 
-for (let i = 0; i <= 32; i++){
+for (let i = 1; i <= 256; i++){
     const newDiv = document.createElement('div');
     newDiv.classList.add('item');
-    newDiv.style.height = '20px';
-    newDiv.style.width = '20px';
+    newDiv.style.height = '10px';
+    newDiv.style.width = '10px';
     container.appendChild(newDiv);
 }
 
@@ -14,7 +14,6 @@ const items = document.querySelectorAll('.item');
 items.forEach((item) => {
     item.addEventListener('mouseover', () => {
         item.style.backgroundColor = 'black';
-    });
-    
+    });    
 });
 
