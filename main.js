@@ -1,16 +1,16 @@
 const container = document.querySelector('#container');
 const body = document.querySelector('body');
 
-const button = document.createElement('button');
-button.textContent = 'Generate your canvas!';
-body.appendChild(button);
+const generateButton = document.createElement('button');
+generateButton.textContent = 'Generate your canvas!';
+body.appendChild(generateButton);
 
 let gridSize = 0;
 
-button.addEventListener('click', () => {
+generateButton.addEventListener('click', () => {
     gridSize = +prompt('Enter the amount of squares per side: ');
     makeGrid(gridSize * gridSize);
-})
+});
 
 function makeGrid(size) {
 
@@ -33,9 +33,18 @@ function makeGrid(size) {
         item.addEventListener('mouseover', () => {
             item.style.backgroundColor = 'black';
         });    
-    });
-    
-}
+    }); 
+};
+
+const resetButton = document.createElement('button');
+resetButton.classList.add('reset');
+resetButton.textContent = "Reset";
+body.appendChild(resetButton);
+
+resetButton.addEventListener('click', () => {
+    container.innerHTML = '';
+});
+
 
 
 
